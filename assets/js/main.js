@@ -101,7 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (type === "img") {
         leftContainer.innerHTML = `<img class="sc-main-media" src="${mediaSrc}" alt="Selected Work">`;
       } else if (type === "vid") {
-        leftContainer.innerHTML = `<video class="sc-main-media" autoplay muted loop playsinline src="${mediaSrc}"></video>`;
+        // AQUÍ ESTÁ EL CAMBIO: Se elimina 'muted' y se añade 'controls'
+        leftContainer.innerHTML = `<video class="sc-main-media" autoplay controls loop playsinline src="${mediaSrc}"></video>`;
       }
 
       const descContainer = section.querySelector(".sc-desc");
