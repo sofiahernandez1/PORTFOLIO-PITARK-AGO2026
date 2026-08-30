@@ -865,11 +865,12 @@
               background-color: #f4f3ef;
               color: #000;
               min-height: 100vh;
-              padding: 8rem 2rem;
+              padding: 8rem 0 4rem 0; /* Padding lateral 0 para que la marquesina ocupe todo */
               text-align: center;
               display: flex;
               flex-direction: column;
               align-items: center;
+              overflow-x: hidden;
             }
             .sp-title {
               font-family: 'BrutaNormal', sans-serif;
@@ -883,6 +884,7 @@
             .sp-desc-container {
               max-width: 900px;
               margin: 4rem auto;
+              padding: 0 2rem;
               font-family: "Space Mono", monospace;
               font-size: 0.85rem;
               line-height: 1.6;
@@ -912,26 +914,54 @@
               margin-bottom: 2rem;
               word-break: break-all;
               letter-spacing: -0.02em;
+              padding: 0 1rem;
             }
-            .sp-normal-bold { font-family: 'BrutaNormal', sans-serif; font-weight: 700; }
-            .sp-recta-bold { font-family: 'BrutaRecta', sans-serif; font-weight: 700; }
+            .sp-normal-bold { font-family: 'BrutaNormal', sans-serif !important; font-weight: 700; }
+            .sp-recta-bold { font-family: 'BrutaRecta', sans-serif !important; font-weight: 700; }
             
-            .sp-weights-block {
-              max-width: 1000px;
-              margin: 0 auto;
-              font-size: clamp(1.2rem, 3vw, 2.5rem);
-              line-height: 1.1;
-              text-align: justify;
-              text-transform: uppercase;
-              letter-spacing: -0.01em;
-              word-break: break-word;
+            /* ANIMACIÓN MARQUESINA PESOS */
+            .sp-marquee-container {
+              width: 100vw;
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              gap: 1.5rem;
+              margin-top: 1rem;
             }
-            .w-nl { font-family: 'BrutaNormal'; font-weight: 300; }
-            .w-nr { font-family: 'BrutaNormal'; font-weight: 400; }
-            .w-nb { font-family: 'BrutaNormal'; font-weight: 700; }
-            .w-rl { font-family: 'BrutaRecta'; font-weight: 300; }
-            .w-rr { font-family: 'BrutaRecta'; font-weight: 400; }
-            .w-rb { font-family: 'BrutaRecta'; font-weight: 700; }
+            .sp-marquee-track {
+              display: flex;
+              width: max-content;
+              animation: scrollWeights 30s linear infinite;
+            }
+            .sp-marquee-track.reverse {
+              animation: scrollWeightsReverse 30s linear infinite;
+            }
+            .sp-marquee-content {
+              display: flex;
+              gap: 2rem;
+              padding-right: 2rem;
+              font-size: clamp(2rem, 5vw, 4.5rem);
+              line-height: 1;
+              text-transform: uppercase;
+              letter-spacing: -0.02em;
+              white-space: nowrap;
+            }
+
+            @keyframes scrollWeights {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            @keyframes scrollWeightsReverse {
+              0% { transform: translateX(-50%); }
+              100% { transform: translateX(0); }
+            }
+
+            .w-nl { font-family: 'BrutaNormal', sans-serif; font-weight: 300; }
+            .w-nr { font-family: 'BrutaNormal', sans-serif; font-weight: 400; }
+            .w-nb { font-family: 'BrutaNormal', sans-serif; font-weight: 700; }
+            .w-rl { font-family: 'BrutaRecta', sans-serif; font-weight: 300; }
+            .w-rr { font-family: 'BrutaRecta', sans-serif; font-weight: 400; }
+            .w-rb { font-family: 'BrutaRecta', sans-serif; font-weight: 700; }
 
             .sp-downloads {
               margin-top: 5rem;
@@ -939,6 +969,7 @@
               gap: 1rem;
               justify-content: center;
               flex-wrap: wrap;
+              padding: 0 2rem;
             }
             .sp-btn {
               background: #000;
@@ -961,34 +992,66 @@
           <h1 class="sp-title">BRUTA</h1>
           
           <div class="sp-desc-container">
-            <p>El concepto central del proyecto Bruta consiste en aplicar las características y lógica constructiva del béton brut al diseño gráfico y, en concreto, a la tipografía. La base fundamental es entender la tipografía como una estructura capaz de trasladar la monumentalidad y el peso de la arquitectura brutalista madrileña al diseño gráfico.</p>
-            <p>La versión Bruta Normal se concibe como el núcleo funcional del proyecto tipográfico. Plantea una interpretación menos literal del estilo arquitectónico, buscando un equilibrio perfecto entre la contundencia visual del brutalismo y las convenciones del diseño tipográfico tradicional. Su estructura mantiene el peso y los volúmenes gruesos característicos del hormigón, pero prioriza una alta legibilidad. Esta adaptabilidad técnica permite que el texto funcione y sea utilizable en cualquier formato y soporte, tanto a gran escala como en cuerpos de texto reducidos.</p>
-            <p>Morfológicamente, esta variante suaviza la rigidez del sistema introduciendo ciertas curvas y formas más orgánicas en la anatomía de los caracteres. Esta decisión de diseño funciona como un guiño directo a la plasticidad de obras madrileñas como Torres Blancas, donde el material pesado cede ante la fluidez de la curva. En este sentido, el diseño de sus contraformas emula el juego de vacíos y macizos característico de estas fachadas. Los blancos internos actúan como espacios arquitectónicos que respiran dentro de la mancha de texto, consolidando a Bruta Normal como una herramienta tipográfica contemporánea con voz propia.</p>
-            <p>La versión Bruta Recta propone una traducción formal directa y mucho más literal de la arquitectura brutalista de Madrid. Prescinde de cualquier ornamentación visual para llevar los parámetros constructivos de estos edificios locales hasta su límite más estricto y radical. Debido a su dureza y geometría, funciona mejor como tipografía de exhibición. Su estructura, carente de ornamentación, está diseñada para generar un gran impacto visual y dominar los grandes formatos.</p>
-            <p>Morfológicamente, se construye únicamente mediante líneas rectas y cortes ortogonales que emulan la rigidez de este estilo arquitectónico. Esta decisión geométrica refleja fielmente la modularidad y las cuadrículas repetitivas presentes en fachadas madrileñas emblemáticas, como las del Edificio IBM, entre otros. En consecuencia, sus contraformas y espacios interiores se resuelven mediante formas estrictamente cuadradas o rectangulares. Esta configuración dota a la tipografía de una elevada densidad visual, replicando en el soporte gráfico la masividad, el peso estructural y la presencia física característica de las edificaciones brutalistas de Madrid.</p>
+            <p>The central concept of the Bruta project is to apply the characteristics and constructive logic of béton brut to graphic design, specifically to typography. The fundamental basis is to understand typography as a structure capable of translating the monumentality and weight of Madrid's brutalist architecture into graphic design.</p>
+            <p>The Bruta Normal version is conceived as the functional core of the typographic project. It proposes a less literal interpretation of the architectural style, seeking a perfect balance between the visual forcefulness of brutalism and the conventions of traditional typographic design. Its structure maintains the heavy weight and thick volumes characteristic of concrete but prioritizes high legibility. This technical adaptability allows the text to function and be usable in any format and medium, both on a large scale and in small body text.</p>
+            <p>Morphologically, this variant softens the rigidity of the system by introducing certain curves and more organic shapes into the anatomy of the characters. This design decision works as a direct nod to the plasticity of Madrid landmarks like Torres Blancas, where the heavy material yields to the fluidity of the curve. In this sense, the design of its counters emulates the interplay of voids and solids characteristic of these facades. The internal whites act as architectural spaces that breathe within the text block, consolidating Bruta Normal as a contemporary typographic tool with its own voice.</p>
+            <p>The Bruta Recta version proposes a direct and much more literal formal translation of Madrid's brutalist architecture. It dispenses with any visual ornamentation to push the constructive parameters of these local buildings to their strictest and most radical limit. Due to its harshness and geometry, it works best as a display typeface. Its unornamented structure is designed to generate great visual impact and dominate large formats.</p>
+            <p>Morphologically, it is built exclusively using straight lines and orthogonal cuts that emulate the rigidity of this architectural style. This geometric decision faithfully reflects the modularity and repetitive grids present in emblematic Madrid facades, such as the IBM Building, among others. Consequently, its counters and interior spaces are resolved through strictly square or rectangular shapes. This configuration gives the typeface a high visual density, replicating on the graphic medium the massiveness, structural weight, and physical presence characteristic of Madrid's brutalist buildings.</p>
           </div>
 
           <div class="sp-label">BASIC LATIN CHARACTERS (NORMAL BOLD)</div>
-          <div class="sp-alphabet sp-normal-bold">
+          <div class="sp-alphabet sp-normal-bold" style="font-family: 'BrutaNormal', sans-serif;">
             ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ
           </div>
 
           <div class="sp-label">BASIC LATIN CHARACTERS (RECTA BOLD)</div>
-          <div class="sp-alphabet sp-recta-bold">
+          <div class="sp-alphabet sp-recta-bold" style="font-family: 'BrutaRecta', sans-serif;">
             ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ
           </div>
 
           <div class="sp-label">WEIGHTS & VERSIONS OVERVIEW</div>
-          <div class="sp-weights-block">
-            <span class="w-nl">BRUTA NORMAL LIGHT: LA LIGEREZA DEL ANDAMIO ESTRUCTURAL.</span> 
-            <span class="w-nr">BRUTA NORMAL REGULAR: EQUILIBRIO ENTRE CONTUNDENCIA Y LEGIBILIDAD.</span> 
-            <span class="w-nb">BRUTA NORMAL BOLD: EL PESO HISTÓRICO Y LA PLASTICIDAD DE LA CURVA.</span> 
-            <span class="w-rl">BRUTA RECTA LIGHT: LÍNEAS RECTAS Y CORTES ORTOGONALES.</span> 
-            <span class="w-rr">BRUTA RECTA REGULAR: TRADUCCIÓN FORMAL DIRECTA DE LA ARQUITECTURA.</span> 
-            <span class="w-rb">BRUTA RECTA BOLD: MASIVIDAD Y PESO ESTRUCTURAL EXTREMO.</span>
-            <span class="w-nb">NÚCLEO FUNCIONAL DEL PROYECTO TIPOGRÁFICO.</span>
-            <span class="w-rr">PRESCINDE DE CUALQUIER ORNAMENTACIÓN VISUAL.</span>
-            <span class="w-nr">HERRAMIENTA TIPOGRÁFICA CONTEMPORÁNEA CON VOZ PROPIA.</span>
+          
+          <!-- MARQUESINA BUCLE DE PESOS -->
+          <div class="sp-marquee-container">
+            <!-- FILA 1 (Derecha a Izquierda) -->
+            <div class="sp-marquee-track">
+              <div class="sp-marquee-content">
+                <span class="w-nl">BRUTA NORMAL LIGHT</span> &mdash; <span class="w-nr">BRUTA NORMAL REGULAR</span> &mdash; <span class="w-nb">BRUTA NORMAL BOLD</span> &mdash;
+              </div>
+              <div class="sp-marquee-content">
+                <span class="w-nl">BRUTA NORMAL LIGHT</span> &mdash; <span class="w-nr">BRUTA NORMAL REGULAR</span> &mdash; <span class="w-nb">BRUTA NORMAL BOLD</span> &mdash;
+              </div>
+            </div>
+            
+            <!-- FILA 2 (Izquierda a Derecha) -->
+            <div class="sp-marquee-track reverse">
+              <div class="sp-marquee-content">
+                <span class="w-rl">BRUTA RECTA LIGHT</span> &mdash; <span class="w-rr">BRUTA RECTA REGULAR</span> &mdash; <span class="w-rb">BRUTA RECTA BOLD</span> &mdash;
+              </div>
+              <div class="sp-marquee-content">
+                <span class="w-rl">BRUTA RECTA LIGHT</span> &mdash; <span class="w-rr">BRUTA RECTA REGULAR</span> &mdash; <span class="w-rb">BRUTA RECTA BOLD</span> &mdash;
+              </div>
+            </div>
+
+            <!-- FILA 3 (Derecha a Izquierda) -->
+            <div class="sp-marquee-track">
+              <div class="sp-marquee-content">
+                <span class="w-nl">BRUTA NORMAL LIGHT</span> &mdash; <span class="w-nr">BRUTA NORMAL REGULAR</span> &mdash; <span class="w-nb">BRUTA NORMAL BOLD</span> &mdash;
+              </div>
+              <div class="sp-marquee-content">
+                <span class="w-nl">BRUTA NORMAL LIGHT</span> &mdash; <span class="w-nr">BRUTA NORMAL REGULAR</span> &mdash; <span class="w-nb">BRUTA NORMAL BOLD</span> &mdash;
+              </div>
+            </div>
+
+            <!-- FILA 4 (Izquierda a Derecha) -->
+            <div class="sp-marquee-track reverse">
+              <div class="sp-marquee-content">
+                <span class="w-rl">BRUTA RECTA LIGHT</span> &mdash; <span class="w-rr">BRUTA RECTA REGULAR</span> &mdash; <span class="w-rb">BRUTA RECTA BOLD</span> &mdash;
+              </div>
+              <div class="sp-marquee-content">
+                <span class="w-rl">BRUTA RECTA LIGHT</span> &mdash; <span class="w-rr">BRUTA RECTA REGULAR</span> &mdash; <span class="w-rb">BRUTA RECTA BOLD</span> &mdash;
+              </div>
+            </div>
           </div>
 
           <div class="sp-downloads">
