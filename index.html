@@ -828,62 +828,31 @@
 
         <!-- 06 FONT -->
         <section id="font" class="showcase-section">
-          <!-- Bloque de estilo exclusivo para la animación de letras -->
-          <style>
-            .font-marquee-wrapper {
-              position: absolute;
-              top: 0; left: 0; right: 0; bottom: 0;
-              overflow: hidden;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              gap: 2rem;
-              background: #f4f3ef;
-            }
-            .font-marquee-track {
-              display: flex;
-              white-space: nowrap;
-              animation: scrollText 15s linear infinite;
-              font-size: clamp(3rem, 6vw, 5rem);
-              font-weight: 700;
-              color: #000;
-              text-transform: uppercase;
-              line-height: 1;
-            }
-            .font-marquee-track.reverse {
-              animation: scrollTextReverse 20s linear infinite;
-              font-family: 'Space Mono', monospace;
-            }
-            @keyframes scrollText {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-            @keyframes scrollTextReverse {
-              0% { transform: translateX(-50%); }
-              100% { transform: translateX(0); }
-            }
-          </style>
-
           <div class="showcase-left position-relative">
-            <!-- Animación CSS como elemento principal -->
-            <div class="sc-main-media font-marquee-wrapper">
-              <div class="font-marquee-track">
-                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &nbsp; A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-              </div>
-              <div class="font-marquee-track reverse">
-                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &nbsp; A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-              </div>
-              <div class="font-marquee-track" style="animation-duration: 25s;">
-                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &nbsp; A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-              </div>
+            <!-- COLLAGE INICIAL -->
+            <div class="sc-main-media font-collage-wrapper">
+               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/E.png" class="fc-l fc-E" alt="E">
+               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/e.png" class="fc-l fc-e" alt="e">
+               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/D.png" class="fc-l fc-D" alt="D">
+               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/d.png" class="fc-l fc-d" alt="d">
+               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/B.png" class="fc-l fc-B" alt="B">
+               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/b.png" class="fc-l fc-b" alt="b">
+               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/c.png" class="fc-l fc-c" alt="c">
+               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/A.png" class="fc-l fc-A" alt="A">
+               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/a.png" class="fc-l fc-a" alt="a">
+               <div class="fc-center-text">
+                  <div class="fc-small">PITARK PRESENTS</div>
+                  <div class="fc-large">BRUTA</div>
+               </div>
             </div>
           </div>
+          
           <div class="showcase-center">
             <div class="sc-num">06</div>
             <h2 class="sc-title">FONT</h2>
             <div class="sc-desc">
               <strong>BRUTA TYPEFACE</strong><br /><br />
-              Bruta es un proyecto tipográfico que dota a la arquitectura brutalista de Madrid de un sistema visual propio. Traduce la geometría estricta, la contundencia de los volúmenes y la tensión del hormigón en caracteres tipográficos. Se divide en dos familias: la Versión Normal, que integra las singulares formas curvas de los edificios, y la Versión Recta, caracterizada por una construcción ortogonal sin ornamentación.
+              Bruta es un proyecto tipográfico que dota a la arquitectura brutalista de Madrid de un sistema visual propio[cite: 1]. Traduce la geometría estricta, la contundencia de los volúmenes y la tensión del hormigón en caracteres tipográficos[cite: 1]. Se divide en dos familias: la Versión Normal, que integra las singulares formas curvas de los edificios, y la Versión Recta, caracterizada por una construcción ortogonal sin ornamentación[cite: 1].
               <br /><br />
               <!-- Botones de descarga -->
               <div class="d-flex flex-wrap gap-2 mt-3">
@@ -897,13 +866,26 @@
               </div>
             </div>
           </div>
+          
           <div class="showcase-right">
-            <!-- El póster original que tenías -->
+            <!-- BOTÓN COLLAGE (Para volver al collage si clickas otra imagen) -->
             <button
               class="sc-thumb active"
+              data-type="collage"
+              data-src=""
+              data-desc="<strong>BRUTA TYPEFACE</strong><br><br>Bruta es un proyecto tipográfico que dota a la arquitectura brutalista de Madrid de un sistema visual propio[cite: 1]. Traduce la geometría estricta, la contundencia de los volúmenes y la tensión del hormigón en caracteres tipográficos[cite: 1]. Se divide en dos familias: la Versión Normal, que integra las singulares formas curvas de los edificios, y la Versión Recta, caracterizada por una construcción ortogonal sin ornamentación[cite: 1]."
+            >
+              <div style="width:100%; height:100%; background:#000; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Space Mono', monospace; font-size:0.7rem; text-align:center; border: 1px solid #333;">
+                BRUTA<br>COLLAGE
+              </div>
+            </button>
+
+            <!-- El póster original -->
+            <button
+              class="sc-thumb"
               data-type="img"
               data-src="Captura de pantalla 2026-08-30 a las 11.03.10.png"
-              data-desc="<strong>BRUTA TYPEFACE</strong><br><br>Bruta es un proyecto tipográfico que dota a la arquitectura brutalista de Madrid de un sistema visual propio. Traduce la geometría estricta, la contundencia de los volúmenes y la tensión del hormigón en caracteres tipográficos. Se divide en dos familias: la Versión Normal, que integra las singulares formas curvas de los edificios, y la Versión Recta, caracterizada por una construcción ortogonal sin ornamentación."
+              data-desc="<strong>BRUTA TYPEFACE</strong><br><br>Póster tipográfico presentando los glifos de la fuente Bruta."
             >
               <img
                 src="Captura de pantalla 2026-08-30 a las 11.03.10.png"
@@ -1110,6 +1092,25 @@
         </div>
       </footer>
     </main>
+
+    <!-- TEMPLATE OCULTO PARA EL COLLAGE -->
+    <template id="font-collage-template">
+      <div class="sc-main-media font-collage-wrapper">
+         <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/E.png" class="fc-l fc-E" alt="E">
+         <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/e.png" class="fc-l fc-e" alt="e">
+         <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/D.png" class="fc-l fc-D" alt="D">
+         <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/d.png" class="fc-l fc-d" alt="d">
+         <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/B.png" class="fc-l fc-B" alt="B">
+         <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/b.png" class="fc-l fc-b" alt="b">
+         <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/c.png" class="fc-l fc-c" alt="c">
+         <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/A.png" class="fc-l fc-A" alt="A">
+         <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/a.png" class="fc-l fc-a" alt="a">
+         <div class="fc-center-text">
+            <div class="fc-small">PITARK PRESENTS</div>
+            <div class="fc-large">BRUTA</div>
+         </div>
+      </div>
+    </template>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
