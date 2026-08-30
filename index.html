@@ -26,11 +26,13 @@
   </head>
 
   <body>
+    <!-- PANTALLA DE CARGA -->
     <div id="preloader">
       <div id="preloaderText" class="preloader-text"></div>
     </div>
 
     <main id="top">
+      <!-- PORTADA HERO -->
       <section id="hero" class="nothin-hero">
         <header class="nothin-header">
           <div class="header-left">
@@ -45,6 +47,7 @@
                 </li>
                 <li><a href="#video" class="dropdown-link">VIDEO</a></li>
                 <li><a href="#gallery" class="dropdown-link">GALLERY</a></li>
+                <li><a href="#font" class="dropdown-link">FONT</a></li>
                 <li><a href="#contact" class="dropdown-link">CONTACT</a></li>
               </ul>
             </div>
@@ -85,6 +88,7 @@
         </footer>
       </section>
 
+      <!-- MENÚ GIGANTE -->
       <section class="bigtype" id="bigType">
         <div class="bigtype__lines" id="bigTypeLines">
           <a class="line" href="#about">ABOUT</a>
@@ -93,10 +97,12 @@
           <a class="line" href="#editorial">EDITORIAL</a>
           <a class="line" href="#video">VIDEO</a>
           <a class="line" href="#gallery">GALLERY</a>
+          <a class="line" href="#font">FONT</a>
           <a class="line" href="#contact">CONTACT</a>
         </div>
       </section>
 
+      <!-- ABOUT -->
       <section id="about" class="about-section">
         <div class="about-top-bar">
           <span class="top-item">MADRID</span>
@@ -142,7 +148,9 @@
         <h1 class="about-big-title">ABOUT</h1>
       </section>
 
+      <!-- CONTENEDOR PARA LAS SECCIONES DE PROYECTOS -->
       <div class="showcase-container">
+        <!-- 01 POSTER -->
         <section id="poster" class="showcase-section">
           <div class="showcase-left">
             <img
@@ -242,6 +250,7 @@
           </div>
         </section>
 
+        <!-- 02 ALBUM -->
         <section id="album" class="showcase-section">
           <div class="showcase-left">
             <img
@@ -258,6 +267,7 @@
             </div>
           </div>
           <div class="showcase-right">
+            <!-- 1. CAPITANA DE LA CAPITAL -->
             <button
               class="sc-thumb active"
               data-type="img"
@@ -270,6 +280,7 @@
               />
             </button>
 
+            <!-- 2. ILLMATIC -->
             <button
               class="sc-thumb"
               data-type="img"
@@ -282,6 +293,7 @@
               />
             </button>
 
+            <!-- 3. CAMARON -->
             <button
               class="sc-thumb"
               data-type="img"
@@ -294,6 +306,7 @@
               />
             </button>
 
+            <!-- 4. PUBERTY -->
             <button
               class="sc-thumb"
               data-type="img"
@@ -306,6 +319,7 @@
               />
             </button>
 
+            <!-- 5. DEVIL CAME TO ME -->
             <button
               class="sc-thumb"
               data-type="img"
@@ -318,6 +332,7 @@
               />
             </button>
 
+            <!-- 6. FOREVER (WU TANG CLAN) -->
             <button
               class="sc-thumb"
               data-type="img"
@@ -330,6 +345,7 @@
               />
             </button>
 
+            <!-- 7. LOKOS SIN CHOKO -->
             <button
               class="sc-thumb"
               data-type="img"
@@ -344,6 +360,7 @@
           </div>
         </section>
 
+        <!-- 03 EDITORIAL -->
         <section id="editorial" class="showcase-section">
           <div class="showcase-left">
             <img
@@ -499,6 +516,7 @@
           </div>
         </section>
 
+        <!-- 04 VIDEO -->
         <section id="video" class="showcase-section">
           <div class="showcase-left">
             <video
@@ -630,6 +648,7 @@
           </div>
         </section>
 
+        <!-- 05 GALLERY -->
         <section id="gallery" class="showcase-section">
           <div class="showcase-left">
             <img
@@ -647,6 +666,7 @@
             </div>
           </div>
           <div class="showcase-right">
+            <!-- PORTRAITS -->
             <button
               class="sc-thumb active"
               data-type="img"
@@ -725,6 +745,7 @@
               />
             </button>
 
+            <!-- CITY LIGHTS -->
             <button
               class="sc-thumb"
               data-type="img"
@@ -804,8 +825,201 @@
             </button>
           </div>
         </section>
+
+        <!-- 06 FONT -->
+        <section id="font" class="showcase-section">
+          <!-- Bloque de estilo exclusivo para la animación de letras -->
+          <style>
+            .font-marquee-wrapper {
+              position: absolute;
+              top: 0; left: 0; right: 0; bottom: 0;
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 2rem;
+              background: #f4f3ef;
+            }
+            .font-marquee-track {
+              display: flex;
+              white-space: nowrap;
+              animation: scrollText 15s linear infinite;
+              font-size: clamp(3rem, 6vw, 5rem);
+              font-weight: 700;
+              color: #000;
+              text-transform: uppercase;
+              line-height: 1;
+            }
+            .font-marquee-track.reverse {
+              animation: scrollTextReverse 20s linear infinite;
+              font-family: 'Space Mono', monospace;
+            }
+            @keyframes scrollText {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            @keyframes scrollTextReverse {
+              0% { transform: translateX(-50%); }
+              100% { transform: translateX(0); }
+            }
+          </style>
+
+          <div class="showcase-left position-relative">
+            <!-- Animación CSS como elemento principal -->
+            <div class="sc-main-media font-marquee-wrapper">
+              <div class="font-marquee-track">
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &nbsp; A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+              </div>
+              <div class="font-marquee-track reverse">
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &nbsp; A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+              </div>
+              <div class="font-marquee-track" style="animation-duration: 25s;">
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &nbsp; A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+              </div>
+            </div>
+          </div>
+          <div class="showcase-center">
+            <div class="sc-num">06</div>
+            <h2 class="sc-title">FONT</h2>
+            <div class="sc-desc">
+              <strong>BRUTA TYPEFACE</strong><br /><br />
+              Bruta es un proyecto tipográfico que dota a la arquitectura brutalista de Madrid de un sistema visual propio. Traduce la geometría estricta, la contundencia de los volúmenes y la tensión del hormigón en caracteres tipográficos. Se divide en dos familias: la Versión Normal, que integra las singulares formas curvas de los edificios, y la Versión Recta, caracterizada por una construcción ortogonal sin ornamentación.
+              <br /><br />
+              <!-- Botones de descarga -->
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a href="assets/fonts/BRUTANORMAL-Light.otf" download class="pill-btn" style="font-size: 0.7rem; padding: 0.4rem 0.8rem;">NORMAL LIGHT &darr;</a>
+                <a href="assets/fonts/BRUTANORMAL-Regular.otf" download class="pill-btn" style="font-size: 0.7rem; padding: 0.4rem 0.8rem;">NORMAL REGULAR &darr;</a>
+                <a href="assets/fonts/BRUTANORMAL-Bold.otf" download class="pill-btn" style="font-size: 0.7rem; padding: 0.4rem 0.8rem;">NORMAL BOLD &darr;</a>
+                
+                <a href="assets/fonts/BRUTARECTA-Light.otf" download class="pill-btn" style="font-size: 0.7rem; padding: 0.4rem 0.8rem;">RECTA LIGHT &darr;</a>
+                <a href="assets/fonts/BRUTARECTA-Regular.otf" download class="pill-btn" style="font-size: 0.7rem; padding: 0.4rem 0.8rem;">RECTA REGULAR &darr;</a>
+                <a href="assets/fonts/BRUTARECTA-Bold.otf" download class="pill-btn" style="font-size: 0.7rem; padding: 0.4rem 0.8rem;">RECTA BOLD &darr;</a>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-right">
+            <!-- El póster original que tenías -->
+            <button
+              class="sc-thumb active"
+              data-type="img"
+              data-src="Captura de pantalla 2026-08-30 a las 11.03.10.png"
+              data-desc="<strong>BRUTA TYPEFACE</strong><br><br>Bruta es un proyecto tipográfico que dota a la arquitectura brutalista de Madrid de un sistema visual propio. Traduce la geometría estricta, la contundencia de los volúmenes y la tensión del hormigón en caracteres tipográficos. Se divide en dos familias: la Versión Normal, que integra las singulares formas curvas de los edificios, y la Versión Recta, caracterizada por una construcción ortogonal sin ornamentación."
+            >
+              <img
+                src="Captura de pantalla 2026-08-30 a las 11.03.10.png"
+                alt="Thumb"
+              />
+            </button>
+            
+            <!-- ANCHOR POINTS: A Normal -->
+            <button
+              class="sc-thumb"
+              data-type="img"
+              data-src="Captura de pantalla 2026-08-30 a las 11.11.50.png"
+              data-desc="<strong>ANCHOR POINTS (NORMAL)</strong><br><br>Análisis estructural y nodos de la Versión Normal de la tipografía Bruta. Muestra el equilibrio entre las formas curvas de los edificios brutalistas y la geometría constructiva."
+            >
+              <img
+                src="Captura de pantalla 2026-08-30 a las 11.11.50.png"
+                alt="Thumb"
+              />
+            </button>
+
+            <!-- ANCHOR POINTS: A Recta -->
+            <button
+              class="sc-thumb"
+              data-type="img"
+              data-src="Captura de pantalla 2026-08-30 a las 11.11.59.png"
+              data-desc="<strong>ANCHOR POINTS (RECTA)</strong><br><br>Construcción puramente ortogonal de la Versión Recta. Refleja la ausencia total de ornamentación mediante una retícula estricta de líneas rectas y vectores limpios."
+            >
+              <img
+                src="Captura de pantalla 2026-08-30 a las 11.11.59.png"
+                alt="Thumb"
+              />
+            </button>
+
+            <!-- STRUCTURAL DETAIL: B -->
+            <button
+              class="sc-thumb"
+              data-type="img"
+              data-src="Captura de pantalla 2026-08-30 a las 11.12.43.png"
+              data-desc="<strong>CONSTRUCCIÓN VECTORIAL</strong><br><br>Detalle de la distribución de nodos, tiradores y curvas, aplicando la lógica del hormigón armado (béton brut) al diseño tipográfico digital."
+            >
+              <img
+                src="Captura de pantalla 2026-08-30 a las 11.12.43.png"
+                alt="Thumb"
+              />
+            </button>
+
+            <!-- STRUCTURAL DETAIL: a -->
+            <button
+              class="sc-thumb"
+              data-type="img"
+              data-src="Captura de pantalla 2026-08-30 a las 11.13.41.png"
+              data-desc="<strong>CONSTRUCCIÓN VECTORIAL</strong><br><br>Detalle de las contraformas. Estas actúan de la misma manera que las ventanas reticulares y huecos estructurales que caracterizan las fachadas de la arquitectura brutalista."
+            >
+              <img
+                src="Captura de pantalla 2026-08-30 a las 11.13.41.png"
+                alt="Thumb"
+              />
+            </button>
+
+            <!-- STRUCTURAL DETAIL: d -->
+            <button
+              class="sc-thumb"
+              data-type="img"
+              data-src="Captura de pantalla 2026-08-30 a las 11.14.12.png"
+              data-desc="<strong>CONSTRUCCIÓN VECTORIAL (d)</strong><br><br>Detalle de la distribución de nodos, tiradores y curvas de la letra 'd' en su versión Normal, mostrando el esqueleto de la tipografía."
+            >
+              <img
+                src="Captura de pantalla 2026-08-30 a las 11.14.12.png"
+                alt="Thumb"
+              />
+            </button>
+
+            <!-- STRUCTURAL DETAIL: e -->
+            <button
+              class="sc-thumb"
+              data-type="img"
+              data-src="Captura de pantalla 2026-08-30 a las 11.14.29.png"
+              data-desc="<strong>CONSTRUCCIÓN VECTORIAL (e)</strong><br><br>Análisis estructural y nodos de la letra 'e'. Se aprecian las curvas precisas que dotan a la fuente de su carácter distintivo."
+            >
+              <img
+                src="Captura de pantalla 2026-08-30 a las 11.14.29.png"
+                alt="Thumb"
+              />
+            </button>
+
+            <!-- WORD: BRUTA NORMAL -->
+            <button
+              class="sc-thumb"
+              data-type="img"
+              data-src="Captura de pantalla 2026-08-30 a las 11.16.50.png"
+              data-desc="<strong>BRUTA NORMAL</strong><br><br>Palabra BRUTA renderizada en la Versión Normal de la tipografía, mostrando el equilibrio general y la integración de las formas curvas con el grosor de las astas."
+            >
+              <img
+                src="Captura de pantalla 2026-08-30 a las 11.16.50.png"
+                alt="Thumb"
+              />
+            </button>
+
+            <!-- WORD: BRUTA RECTA -->
+            <button
+              class="sc-thumb"
+              data-type="img"
+              data-src="Captura de pantalla 2026-08-30 a las 11.17.23.png"
+              data-desc="<strong>BRUTA RECTA</strong><br><br>Palabra BRUTA renderizada en la Versión Recta. Se hace evidente la construcción estrictamente ortogonal y la ausencia de curvas."
+            >
+              <img
+                src="Captura de pantalla 2026-08-30 a las 11.17.23.png"
+                alt="Thumb"
+              />
+            </button>
+          </div>
+        </section>
+
       </div>
 
+      <!-- CONTACTO (BLANCO) -->
       <section id="contact" class="contact-section">
         <div class="container-fluid p-0 h-100">
           <div class="row g-0 h-100 align-items-stretch">
@@ -882,6 +1096,7 @@
           <a href="#editorial" class="footer-link">EDITORIAL</a>
           <a href="#video" class="footer-link">VIDEO</a>
           <a href="#gallery" class="footer-link">GALLERY</a>
+          <a href="#font" class="footer-link">FONT</a>
           <a href="#contact" class="footer-link">CONTACT</a>
         </nav>
 
