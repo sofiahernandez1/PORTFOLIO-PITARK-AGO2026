@@ -47,6 +47,7 @@
                 </li>
                 <li><a href="#video" class="dropdown-link">VIDEO</a></li>
                 <li><a href="#gallery" class="dropdown-link">GALLERY</a></li>
+                <li><a href="#font" class="dropdown-link">FONT</a></li>
                 <li><a href="#contact" class="dropdown-link">CONTACT</a></li>
               </ul>
             </div>
@@ -96,6 +97,7 @@
           <a class="line" href="#editorial">EDITORIAL</a>
           <a class="line" href="#video">VIDEO</a>
           <a class="line" href="#gallery">GALLERY</a>
+          <a class="line" href="#font">FONT</a>
           <a class="line" href="#contact">CONTACT</a>
         </div>
       </section>
@@ -823,6 +825,181 @@
             </button>
           </div>
         </section>
+
+        <!-- 06 FONT SPECIMEN -->
+        <section id="font" class="specimen-section">
+          <!-- Bloque de estilo exclusivo para el espécimen -->
+          <style>
+            @font-face {
+              font-family: 'BrutaNormal';
+              src: url('assets/fonts/BRUTANORMAL-Light.otf') format('opentype');
+              font-weight: 300;
+            }
+            @font-face {
+              font-family: 'BrutaNormal';
+              src: url('assets/fonts/BRUTANORMAL-Regular.otf') format('opentype');
+              font-weight: 400;
+            }
+            @font-face {
+              font-family: 'BrutaNormal';
+              src: url('assets/fonts/BRUTANORMAL-Bold.otf') format('opentype');
+              font-weight: 700;
+            }
+            @font-face {
+              font-family: 'BrutaRecta';
+              src: url('assets/fonts/BRUTARECTA-Light.otf') format('opentype');
+              font-weight: 300;
+            }
+            @font-face {
+              font-family: 'BrutaRecta';
+              src: url('assets/fonts/BRUTARECTA-Regular.otf') format('opentype');
+              font-weight: 400;
+            }
+            @font-face {
+              font-family: 'BrutaRecta';
+              src: url('assets/fonts/BRUTARECTA-Bold.otf') format('opentype');
+              font-weight: 700;
+            }
+
+            .specimen-section {
+              background-color: #f4f3ef;
+              color: #000;
+              min-height: 100vh;
+              padding: 8rem 2rem;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+            .sp-title {
+              font-family: 'BrutaNormal', sans-serif;
+              font-weight: 700;
+              font-size: clamp(6rem, 24vw, 30rem);
+              line-height: 0.8;
+              margin: 0;
+              text-transform: uppercase;
+              letter-spacing: -0.02em;
+            }
+            .sp-desc-container {
+              max-width: 900px;
+              margin: 4rem auto;
+              font-family: "Space Mono", monospace;
+              font-size: 0.85rem;
+              line-height: 1.6;
+              text-align: justify;
+              text-justify: inter-word;
+              text-transform: uppercase;
+            }
+            @media (min-width: 768px) {
+              .sp-desc-container {
+                column-count: 2;
+                column-gap: 3rem;
+              }
+            }
+            .sp-desc-container p { margin-bottom: 1.5rem; }
+            .sp-label {
+              font-family: "Space Mono", monospace;
+              font-size: 0.65rem;
+              letter-spacing: 0.1em;
+              opacity: 0.6;
+              margin: 4rem 0 1.5rem;
+              text-transform: uppercase;
+            }
+            .sp-alphabet {
+              font-size: clamp(3rem, 11vw, 12rem);
+              line-height: 0.85;
+              text-transform: uppercase;
+              margin-bottom: 2rem;
+              word-break: break-all;
+              letter-spacing: -0.02em;
+            }
+            .sp-normal-bold { font-family: 'BrutaNormal', sans-serif; font-weight: 700; }
+            .sp-recta-bold { font-family: 'BrutaRecta', sans-serif; font-weight: 700; }
+            
+            .sp-weights-block {
+              max-width: 1000px;
+              margin: 0 auto;
+              font-size: clamp(1.2rem, 3vw, 2.5rem);
+              line-height: 1.1;
+              text-align: justify;
+              text-transform: uppercase;
+              letter-spacing: -0.01em;
+              word-break: break-word;
+            }
+            .w-nl { font-family: 'BrutaNormal'; font-weight: 300; }
+            .w-nr { font-family: 'BrutaNormal'; font-weight: 400; }
+            .w-nb { font-family: 'BrutaNormal'; font-weight: 700; }
+            .w-rl { font-family: 'BrutaRecta'; font-weight: 300; }
+            .w-rr { font-family: 'BrutaRecta'; font-weight: 400; }
+            .w-rb { font-family: 'BrutaRecta'; font-weight: 700; }
+
+            .sp-downloads {
+              margin-top: 5rem;
+              display: flex;
+              gap: 1rem;
+              justify-content: center;
+              flex-wrap: wrap;
+            }
+            .sp-btn {
+              background: #000;
+              color: #f4f3ef !important;
+              padding: 0.8rem 1.6rem;
+              border-radius: 50px;
+              text-decoration: none;
+              font-weight: 600;
+              font-size: 0.8rem;
+              font-family: "Clash Display", sans-serif;
+              transition: opacity 0.3s, transform 0.3s;
+              letter-spacing: 0.05em;
+            }
+            .sp-btn:hover {
+              opacity: 0.8;
+              transform: translateY(-2px);
+            }
+          </style>
+
+          <h1 class="sp-title">BRUTA</h1>
+          
+          <div class="sp-desc-container">
+            <p>El concepto central del proyecto Bruta consiste en aplicar las características y lógica constructiva del béton brut al diseño gráfico y, en concreto, a la tipografía. La base fundamental es entender la tipografía como una estructura capaz de trasladar la monumentalidad y el peso de la arquitectura brutalista madrileña al diseño gráfico.</p>
+            <p>La versión Bruta Normal se concibe como el núcleo funcional del proyecto tipográfico. Plantea una interpretación menos literal del estilo arquitectónico, buscando un equilibrio perfecto entre la contundencia visual del brutalismo y las convenciones del diseño tipográfico tradicional. Su estructura mantiene el peso y los volúmenes gruesos característicos del hormigón, pero prioriza una alta legibilidad. Esta adaptabilidad técnica permite que el texto funcione y sea utilizable en cualquier formato y soporte, tanto a gran escala como en cuerpos de texto reducidos.</p>
+            <p>Morfológicamente, esta variante suaviza la rigidez del sistema introduciendo ciertas curvas y formas más orgánicas en la anatomía de los caracteres. Esta decisión de diseño funciona como un guiño directo a la plasticidad de obras madrileñas como Torres Blancas, donde el material pesado cede ante la fluidez de la curva. En este sentido, el diseño de sus contraformas emula el juego de vacíos y macizos característico de estas fachadas. Los blancos internos actúan como espacios arquitectónicos que respiran dentro de la mancha de texto, consolidando a Bruta Normal como una herramienta tipográfica contemporánea con voz propia.</p>
+            <p>La versión Bruta Recta propone una traducción formal directa y mucho más literal de la arquitectura brutalista de Madrid. Prescinde de cualquier ornamentación visual para llevar los parámetros constructivos de estos edificios locales hasta su límite más estricto y radical. Debido a su dureza y geometría, funciona mejor como tipografía de exhibición. Su estructura, carente de ornamentación, está diseñada para generar un gran impacto visual y dominar los grandes formatos.</p>
+            <p>Morfológicamente, se construye únicamente mediante líneas rectas y cortes ortogonales que emulan la rigidez de este estilo arquitectónico. Esta decisión geométrica refleja fielmente la modularidad y las cuadrículas repetitivas presentes en fachadas madrileñas emblemáticas, como las del Edificio IBM, entre otros. En consecuencia, sus contraformas y espacios interiores se resuelven mediante formas estrictamente cuadradas o rectangulares. Esta configuración dota a la tipografía de una elevada densidad visual, replicando en el soporte gráfico la masividad, el peso estructural y la presencia física característica de las edificaciones brutalistas de Madrid.</p>
+          </div>
+
+          <div class="sp-label">BASIC LATIN CHARACTERS (NORMAL BOLD)</div>
+          <div class="sp-alphabet sp-normal-bold">
+            ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ
+          </div>
+
+          <div class="sp-label">BASIC LATIN CHARACTERS (RECTA BOLD)</div>
+          <div class="sp-alphabet sp-recta-bold">
+            ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ
+          </div>
+
+          <div class="sp-label">WEIGHTS & VERSIONS OVERVIEW</div>
+          <div class="sp-weights-block">
+            <span class="w-nl">BRUTA NORMAL LIGHT: LA LIGEREZA DEL ANDAMIO ESTRUCTURAL.</span> 
+            <span class="w-nr">BRUTA NORMAL REGULAR: EQUILIBRIO ENTRE CONTUNDENCIA Y LEGIBILIDAD.</span> 
+            <span class="w-nb">BRUTA NORMAL BOLD: EL PESO HISTÓRICO Y LA PLASTICIDAD DE LA CURVA.</span> 
+            <span class="w-rl">BRUTA RECTA LIGHT: LÍNEAS RECTAS Y CORTES ORTOGONALES.</span> 
+            <span class="w-rr">BRUTA RECTA REGULAR: TRADUCCIÓN FORMAL DIRECTA DE LA ARQUITECTURA.</span> 
+            <span class="w-rb">BRUTA RECTA BOLD: MASIVIDAD Y PESO ESTRUCTURAL EXTREMO.</span>
+            <span class="w-nb">NÚCLEO FUNCIONAL DEL PROYECTO TIPOGRÁFICO.</span>
+            <span class="w-rr">PRESCINDE DE CUALQUIER ORNAMENTACIÓN VISUAL.</span>
+            <span class="w-nr">HERRAMIENTA TIPOGRÁFICA CONTEMPORÁNEA CON VOZ PROPIA.</span>
+          </div>
+
+          <div class="sp-downloads">
+            <a href="assets/fonts/BRUTANORMAL-Light.otf" download class="sp-btn">NORMAL LIGHT &darr;</a>
+            <a href="assets/fonts/BRUTANORMAL-Regular.otf" download class="sp-btn">NORMAL REGULAR &darr;</a>
+            <a href="assets/fonts/BRUTANORMAL-Bold.otf" download class="sp-btn">NORMAL BOLD &darr;</a>
+            <a href="assets/fonts/BRUTARECTA-Light.otf" download class="sp-btn">RECTA LIGHT &darr;</a>
+            <a href="assets/fonts/BRUTARECTA-Regular.otf" download class="sp-btn">RECTA REGULAR &darr;</a>
+            <a href="assets/fonts/BRUTARECTA-Bold.otf" download class="sp-btn">RECTA BOLD &darr;</a>
+          </div>
+        </section>
       </div>
 
       <!-- CONTACTO (BLANCO) -->
@@ -902,6 +1079,7 @@
           <a href="#editorial" class="footer-link">EDITORIAL</a>
           <a href="#video" class="footer-link">VIDEO</a>
           <a href="#gallery" class="footer-link">GALLERY</a>
+          <a href="#font" class="footer-link">FONT</a>
           <a href="#contact" class="footer-link">CONTACT</a>
         </nav>
 
