@@ -98,11 +98,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const descHTML = this.getAttribute("data-desc");
 
       const leftContainer = section.querySelector(".showcase-left");
+      
+      // NUEVO: Compatibilidad con el Collage
       if (type === "img") {
         leftContainer.innerHTML = `<img class="sc-main-media" src="${mediaSrc}" alt="Selected Work">`;
       } else if (type === "vid") {
-        // AQUÍ ESTÁ EL CAMBIO: Se elimina 'muted' y se añade 'controls'
         leftContainer.innerHTML = `<video class="sc-main-media" autoplay controls loop playsinline src="${mediaSrc}"></video>`;
+      } else if (type === "collage") {
+        const template = document.getElementById("font-collage-template");
+        if (template) leftContainer.innerHTML = template.innerHTML;
       }
 
       const descContainer = section.querySelector(".sc-desc");
