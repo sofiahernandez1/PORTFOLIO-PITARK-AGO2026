@@ -632,7 +632,6 @@
           </div>
         </section>
 
-        <!-- SECCIÓN DE GALERÍA -->
         <section id="gallery" class="showcase-section">
           <div class="showcase-left">
             <img
@@ -694,7 +693,6 @@
               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/ucm_ciencias_informacion.png?updatedAt=1788096717918" alt="Thumb"/>
             </button>
 
-            <!-- Portraits -->
             <button
               class="sc-thumb"
               data-type="img"
@@ -773,7 +771,6 @@
               />
             </button>
 
-            <!-- CITY LIGHTS -->
             <button
               class="sc-thumb"
               data-type="img"
@@ -942,7 +939,7 @@
             .sp-alphabet {
               font-size: clamp(2rem, 7vw, 10rem);
               line-height: 0.85;
-              text-transform: uppercase;
+              /* text-transform: uppercase; <--- ¡Esta línea causaba el problema! Ha sido eliminada */
               margin-bottom: 2rem;
               word-break: break-all;
               letter-spacing: -0.02em;
@@ -1074,12 +1071,12 @@
 
           <div class="sp-label">BASIC LATIN CHARACTERS (NORMAL BOLD)</div>
           <div class="sp-alphabet w-nb" style="font-family: 'BrutaNormal', sans-serif;">
-            ABCDEFGHIJKLMNÑ<br>OPQRSTUVWXYZ
+            ABCDEFGHIJKLMNÑ<br>OPQRSTUVWXYZ<br>abcdefghijklmnñ<br>opqrstuvwxyz
           </div>
 
           <div class="sp-label">BASIC LATIN CHARACTERS (RECTA BOLD)</div>
           <div class="sp-alphabet w-rb" style="font-family: 'BrutaRecta', sans-serif;">
-            ABCDEFGHIJKLMNÑ<br>OPQRSTUVWXYZ
+            ABCDEFGHIJKLMNÑ<br>OPQRSTUVWXYZ<br>abcdefghijklmnñ<br>opqrstuvwxyz
           </div>
 
           <div class="sp-label">WEIGHTS & VERSIONS OVERVIEW</div>
@@ -1263,7 +1260,6 @@
       </footer>
     </main>
 
-    <!-- OVERLAY GALLERY MASONRY -->
     <div id="galleryOverlay" class="gallery-overlay">
       <button id="closeGalleryBtn" class="close-gallery">&times; CLOSE</button>
       <div class="masonry-grid">
@@ -1282,7 +1278,6 @@
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/edificio_sepe.png?updatedAt=1788096781449" alt="Gallery"></div>
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/ucm_ciencias_informacion.png?updatedAt=1788096717918" alt="Gallery"></div>
 
-        <!-- Portraits -->
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/Foto02.png" alt="Gallery"></div>
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/Foto01.png" alt="Gallery"></div>
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/Foto03.png" alt="Gallery"></div>
@@ -1291,7 +1286,6 @@
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/Foto06.png" alt="Gallery"></div>
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/Foto07.png" alt="Gallery"></div>
 
-        <!-- City Lights -->
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/Foto01.jpg" alt="Gallery"></div>
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/Foto02.jpg" alt="Gallery"></div>
         <div class="masonry-item"><img src="https://ik.imagekit.io/sofiahernandez/Portfolio/Foto03.jpg" alt="Gallery"></div>
