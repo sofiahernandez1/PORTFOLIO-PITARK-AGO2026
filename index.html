@@ -23,6 +23,26 @@
     />
 
     <link rel="stylesheet" href="assets/css/otros.css" />
+
+    <style>
+      /* Tipografía para los textos de la sección ABOUT */
+      .about-text {
+        font-family: "Clash Display", sans-serif;
+      }
+
+      /* Estilo para el texto de "Click aquí para ver más" sobre las miniaturas */
+      .click-hint {
+        width: 100%;
+        flex-basis: 100%;
+        text-align: center;
+        font-family: "Space Mono", monospace;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        opacity: 0.6;
+        letter-spacing: 0.05em;
+      }
+    </style>
   </head>
 
   <body>
@@ -164,6 +184,7 @@
             </div>
           </div>
           <div class="showcase-right">
+            <div class="click-hint">CLICK AQUÍ PARA VER MÁS &darr;</div>
             <button
               class="sc-thumb active"
               data-type="img"
@@ -260,6 +281,7 @@
             </div>
           </div>
           <div class="showcase-right">
+            <div class="click-hint">CLICK AQUÍ PARA VER MÁS &darr;</div>
             <button
               class="sc-thumb active"
               data-type="img"
@@ -365,6 +387,7 @@
             </div>
           </div>
           <div class="showcase-right">
+            <div class="click-hint">CLICK AQUÍ PARA VER MÁS &darr;</div>
             <button
               class="sc-thumb active"
               data-type="img"
@@ -522,6 +545,7 @@
             </div>
           </div>
           <div class="showcase-right">
+            <div class="click-hint">CLICK AQUÍ PARA VER MÁS &darr;</div>
             <button
               class="sc-thumb active"
               data-type="vid"
@@ -649,7 +673,7 @@
             <button id="viewAllGalleryBtn" class="pill-btn" style="margin-top: 2rem; font-size: 0.7rem; padding: 0.6rem 1.2rem;">VIEW ALL GALLERY &rarr;</button>
           </div>
           <div class="showcase-right">
-            
+            <div class="click-hint">CLICK AQUÍ PARA VER MÁS &darr;</div>
             <button class="sc-thumb active" data-type="img" data-src="https://ik.imagekit.io/sofiahernandez/Portfolio/antigua_embajada_dos.png?updatedAt=1788097037881" data-desc="<strong>BRUTA</strong><br><br>PHOTOGRAPHIC ARCHIVE OF MY BRUTA PROJECT, A TYPOGRAPHY AND PHOTOBOOK BASED ON MADRID'S BRUTALIST ARCHITECTURE.<br><br><em>Antigua Embajada Británica</em>">
               <img src="https://ik.imagekit.io/sofiahernandez/Portfolio/antigua_embajada_dos.png?updatedAt=1788097037881" alt="Thumb"/>
             </button>
@@ -990,31 +1014,6 @@
             .w-rl { font-family: 'BrutaRecta', sans-serif; font-weight: 300; }
             .w-rr { font-family: 'BrutaRecta', sans-serif; font-weight: 400; }
             .w-rb { font-family: 'BrutaRecta', sans-serif; font-weight: 700; }
-
-            .sp-downloads {
-              margin-top: 5rem;
-              display: flex;
-              gap: 1rem;
-              justify-content: center;
-              flex-wrap: wrap;
-              padding: 0 2rem;
-            }
-            .sp-btn {
-              background: #000;
-              color: #f4f3ef !important;
-              padding: 0.8rem 1.6rem;
-              border-radius: 50px;
-              text-decoration: none;
-              font-weight: 600;
-              font-size: 0.8rem;
-              font-family: "Clash Display", sans-serif;
-              transition: opacity 0.3s, transform 0.3s;
-              letter-spacing: 0.05em;
-            }
-            .sp-btn:hover {
-              opacity: 0.8;
-              transform: translateY(-2px);
-            }
             
             .gallery-overlay {
               position: fixed;
@@ -1152,18 +1151,6 @@
                 a b c d e f g h i j k l m n ñ o p q r s t u v w x y z&nbsp;
               </div>
             </div>
-          </div>
-
-          <div class="sp-downloads">
-            <a href="assets/fonts/BRUTANORMAL-Bold.otf" download class="sp-btn">NORMAL BOLD &darr;</a>
-            <a href="assets/fonts/BRUTANORMAL-Regular.otf" download class="sp-btn">NORMAL REGULAR &darr;</a>
-            <a href="assets/fonts/BRUTANORMAL-Light.otf" download class="sp-btn">NORMAL LIGHT &darr;</a>
-            <a href="assets/fonts/BRUTANORMAL-Thin.otf" download class="sp-btn">NORMAL THIN &darr;</a>
-            
-            <a href="assets/fonts/BRUTARECTA-Bold.otf" download class="sp-btn">RECTA BOLD &darr;</a>
-            <a href="assets/fonts/BRUTARECTA-Regular.otf" download class="sp-btn">RECTA REGULAR &darr;</a>
-            <a href="assets/fonts/BRUTARECTA-Light.otf" download class="sp-btn">RECTA LIGHT &darr;</a>
-            <a href="assets/fonts/BRUTARECTA-Thin.otf" download class="sp-btn">RECTA THIN &darr;</a>
           </div>
         </section>
       </div>
